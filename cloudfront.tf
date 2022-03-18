@@ -15,6 +15,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
       origin_access_identity = aws_cloudfront_origin_access_identity.OAI.cloudfront_access_identity_path
     }
   }
+  
 
   enabled             = true
   is_ipv6_enabled     = false

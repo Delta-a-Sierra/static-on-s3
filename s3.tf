@@ -25,7 +25,7 @@ resource "aws_s3_bucket_website_configuration" "s3WebConfig" {
 
 resource "aws_s3_bucket_policy" "allow_access_from_cloudfront" {
   bucket = aws_s3_bucket.s3b.bucket
-  policy = templatefile("bucket_policy.tftpl", {bucket_arn = aws_s3_bucket.s3b.arn})
+  policy = templatefile("bucket_policy.tftpl", {bucket_arn = aws_s3_bucket.s3b.arn, oai_id = aws_cloudfront_origin_access_identity.OAI.id})
 }
 
 resource "aws_s3_bucket_object" "object" {
