@@ -28,7 +28,7 @@ terraform init
 5. create tfplan
 ```bash
 # creates plan file
-terraform plan -out-file plan-name.tfplan
+terraform plan -out plan-name.tfplan
 ```
 6. apply tfplan
 ```bash
